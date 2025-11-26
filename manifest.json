@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Phishing Detector",
+  "version": "1.0",
+  "description": "Extracts email content and sends it to n8n for analysis.",
+  "permissions": ["activeTab", "scripting"],
+  "host_permissions": ["https://mail.google.com/*","http://localhost:5678/*","https://bwbwy4r4y50rtzug6cgnkvdu.hooks.n8n.cloud/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Analyze Phishing Risk"
+  }
+}
