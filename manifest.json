@@ -3,12 +3,25 @@
   "name": "Phishing Detector",
   "version": "1.0",
   "description": "Extracts email content and sends it to n8n for analysis.",
-  "permissions": ["activeTab", "scripting"],
-  "host_permissions": ["https://mail.google.com/*","http://localhost:5678/*","https://pink-hound-93.hooks.n8n.cloud/*"],
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://mail.google.com/*",
+    "http://localhost:5678/*",
+    "https://mail.outlook.com/*",
+    "https://mail.yahoo.com/*"
+  ],
   "background": {
     "service_worker": "background.js"
   },
   "action": {
     "default_title": "Analyze Phishing Risk"
+  },
+  "icons": {
+    "16": "assets/icons/shield-16.png",
+    "48": "assets/icons/shield-48.png",
+    "128": "assets/icons/shield-128.png"
   }
 }
