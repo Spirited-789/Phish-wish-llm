@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=320">
+  <link rel="stylesheet" href="popup.css">
+  <title>Phishing Detector</title>
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="logo">
+        <img src="assets/icons/shield-16.png" alt="Shield">
+        <span>Phishing Detector</span>
+      </div>
+    </header>
+
+    <!-- Loading State -->
+    <div id="loading" class="loading-state">
+      <div class="spinner"></div>
+      <p>Analyzing email...</p>
+    </div>
+
+    <!-- Result Content (hidden initially) -->
+    <div id="result" class="result-content hidden">
+      <!-- Risk Indicator -->
+      <div id="risk-indicator" class="risk-indicator">
+        <div class="risk-icon">⚠️</div>
+        <span id="risk-badge" class="risk-badge high">HIGH RISK</span>
+      </div>
+
+      <!-- Email Info -->
+      <div class="email-info">
+        <p><strong>Subject:</strong> <span id="subject">Loading...</span></p>
+        <p><strong>Sender:</strong> <span id="sender">Loading...</span></p>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <button id="btn-report" class="btn btn-primary">Report</button>
+        <button id="btn-dismiss" class="btn btn-secondary">Dismiss</button>
+      </div>
+    </div>
+
+    <!-- Error State -->
+    <div id="error" class="error-state hidden">
+      <div class="error-icon">❌</div>
+      <p id="error-message">Could not analyze email</p>
+      <button id="btn-retry" class="btn btn-primary">Retry</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -17,7 +17,8 @@
     "service_worker": "background.js"
   },
   "action": {
-    "default_title": "Analyze Phishing Risk"
+    "default_title": "Analyze Phishing Risk",
+    "default_popup": "popup.html"
   },
   "icons": {
     "16": "assets/icons/shield-16.png",
